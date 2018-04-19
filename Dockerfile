@@ -46,6 +46,7 @@ RUN echo "export PATH="/home/fabrost/miniconda/bin:$PATH"" >> ~/.bashrc && \
 COPY environment.yml /home/fabrost/
 RUN ~/miniconda/bin/conda env create
 RUN rm environment.yml
+USER root
 
 
 #########
