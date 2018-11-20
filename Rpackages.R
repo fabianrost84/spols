@@ -1,3 +1,8 @@
-install.packages("BiocManager")
+install.packages(c(
+  "BiocManager",
+  "irlba"))
 library(BiocManager)
-BiocManager::install(c("AnnotationHub", "scater", "scran"))
+BiocManager::install(c(
+  "AnnotationHub", 
+  "scater", 
+  "scran"))
