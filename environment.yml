@@ -19,6 +19,7 @@ dependencies:
   - pandas
   - python-igraph
   - r-data.table
+  - r-irkernel
   - r-magrittr
   - r-matrix
   - r-reticulate
