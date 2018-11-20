@@ -6,6 +6,7 @@ channels:
   - defaults
 dependencies:
   - bottleneck
+  - iminuit 
   - jupyter
   - jupyter_nbextensions_configurator
   - louvain
@@ -30,4 +31,5 @@ dependencies:
   - seaborn
   - statsmodels
   - pip:
+    - line_profiler
     - multicoretsne
