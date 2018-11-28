@@ -5,8 +5,10 @@ channels:
   - conda-forge
   - defaults
 dependencies:
+  - bioservices
   - bottleneck
-  - iminuit 
+  - iminuit
+  - ipycache
   - jupyter
   - jupyter_nbextensions_configurator
   - louvain
