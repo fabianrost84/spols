@@ -1,27 +1,39 @@
-name: base
 channels:
   - r
   - bioconda
   - conda-forge
   - defaults
 dependencies:
+  - bioconductor-ensdb.mmusculus.v79
+  - bioconductor-org.mm.eg.db
+  - bioconductor-scater
+  - bioconductor-scran
   - bioservices
   - bottleneck
   - iminuit
   - ipycache
   - jupyter
   - jupyter_nbextensions_configurator
+  - jupyterlab
+  - jupyterlab-git
   - louvain
+  - python=3
   - matplotlib
   - matplotlib-venn
   - notebook
   - numba
   - numexpr
   - numpy
+  - pandas
+  - pymc
+  - pymc3
+  - pypairs
   - openpyxl
   - pandas
+  - pip
   - python-igraph
   - r-data.table
+  - r-ggplot2
   - r-irkernel
   - r-magrittr
   - r-matrix
@@ -29,9 +41,510 @@ dependencies:
   - rpy2
   - scanpy
   - scikit-learn
-  - scipy
   - seaborn
   - statsmodels
   - pip:
+    - bbknn
+    - gprofiler-official
+    - ipycache
+    - joblib
     - line_profiler
     - multicoretsne
+
+  
+   
+  #  
+  # - _r-mutex
+  # - absl-py
+  # - alabaster
+  # - altair
+  # - appdirs
+  # - asn1crypto
+  # - astor
+  # - attrs
+  # - automat
+  # - autopep8
+  # - babel
+  # - backcall
+  # - beautifulsoup4
+  # - binutils_impl_linux-64
+  # - binutils_linux-64
+  # - bioconductor-annotationdbi
+  # - bioconductor-annotationfilter
+  # - bioconductor-biobase
+  # - bioconductor-biocgenerics
+  # - bioconductor-biocparallel
+  # - bioconductor-biomart
+  # - bioconductor-biostrings
+  # - bioconductor-delayedarray
+  
+  # - bioconductor-ensembldb
+  # - bioconductor-genomeinfodb
+  # - bioconductor-genomeinfodbdata
+  # - bioconductor-genomicalignments
+  # - bioconductor-genomicfeatures
+  # - bioconductor-genomicranges
+  # - bioconductor-iranges
+  # - bioconductor-protgenerics
+  # - bioconductor-org.mm.eg.db
+  # - bioconductor-rsamtools
+  # - bioconductor-rtracklayer
+  # - bioconductor-s4vectors
+  # - bioconductor-scater
+  # - bioconductor-scran
+  # - bioconductor-summarizedexperiment
+  # - bioconductor-xvector
+  # - bioconductor-zlibbioc
+  # - bioservices
+  # - blas
+  # - bleach
+  # - blosc
+  # - brewer2mpl
+  # - bwidget
+  # - bzip2
+  # - c-ares
+  # - ca-certificates
+  # - cairo
+  # - certifi
+  # - cffi
+  # - chardet
+  # - click
+  # - cloog
+  # - colorama
+  # - colorlog
+  # - constantly
+  # - cryptography
+  # - cryptography-vectors
+  # - curl
+  # - cycler
+  # - cyrus-sasl
+  # - cython
+  # - dbus
+  # - dca
+  # - decorator
+  # - docutils
+  # - easydev
+  # - entrypoints
+  # - et_xmlfile
+  # - expat
+  # - flake8
+  # - font-ttf-dejavu-sans-mono
+  # - font-ttf-inconsolata
+  # - font-ttf-source-code-pro
+  # - font-ttf-ubuntu
+  # - fontconfig
+  # - fonts-anaconda
+  # - freetype
+  # - fribidi
+  # - gast
+  # - gcc
+  # - gcc_impl_linux-64
+  # - gcc_linux-64
+  # - gettext
+  # - gevent
+  # - gfortran_impl_linux-64
+  # - gfortran_linux-64
+  # - ggplot
+  # - git
+  # - glib
+  # - gmp
+  # - graphite2
+  # - greenlet
+  # - grequests
+  # - grpcio
+  # - gseapy
+  # - gsl
+  # - gst-plugins-base
+  # - gstreamer
+  # - gxx_impl_linux-64
+  # - gxx_linux-64
+  # - h5py
+  # - harfbuzz
+  # - hdf5
+  # - html5lib
+  # - hyperlink
+  # - icu
+  # - idna
+  # - igraph
+  # - imagesize
+  # - iminuit
+  # - incremental
+  # - intel-openmp
+  # - ipykernel
+  # - ipython
+  # - ipython_genutils
+  # - ipywidgets
+  # - isl
+  # - jdcal
+  # - jedi
+  # - jinja2
+  # - jpeg
+  # - jsonschema
+  # - jupyter
+  # - jupyter_client
+  # - jupyter_console
+  # - jupyter_contrib_core
+  # - jupyter_core
+  # - jupyter_nbextensions_configurator
+  # - jupyterlab
+  # - jupyterlab-git
+  # - jupyterlab_launcher
+  # - jupyterlab_server
+  # - keras-preprocessing
+  # - kiwisolver
+  # - kopt
+  # - krb5
+  # - leidenalg
+  # - libcurl
+  # - libdeflate
+  # - libedit
+  # - libffi
+  # - libgcc
+  # - libgcc-ng
+  # - libgfortran
+  # - libgfortran-ng
+  # - libgpuarray
+  # - libiconv
+  # - libidn2
+  # - libntlm
+  # - libopenblas
+  # - libpng
+  # - libprotobuf
+  # - libsodium
+  # - libssh2
+  # - libstdcxx-ng
+  # - libtiff
+  # - libunistring
+  # - libuuid
+  # - libxcb
+  # - libxml2
+  # - libxslt
+  # - llvmlite
+  # - louvain
+  # - lxml
+  # - lz4-c
+  # - lzo
+  # - make
+  # - mako
+  # - markdown
+  # - markupsafe
+  # - matplotlib
+  # - matplotlib-base
+  # - matplotlib-venn
+  # - mccabe
+  # - mistune
+  # - mkl
+  # - mkl_fft
+  # - mkl_random
+  # - more-itertools
+  # - mpc
+  # - mpfr
+  # - nb_conda
+  # - nb_conda_kernels
+  # - nbconvert
+  # - nbformat
+  # - ncurses
+  # - nodejs
+  # - notebook
+  # - numba
+  # - numpy
+  # - numpy-base
+  # - numpydoc
+  # - openblas
+  # - openmp
+  # - openpyxl
+  # - openssl
+  # - packaging
+  # - pandas
+  # - pandoc
+  # - pandocfilters
+  # - pango
+  # - parso
+  # - patsy
+  # - pcre
+  # - perl
+  # - pexpect
+  # - pickleshare
+  # - pip
+  # - pixman
+  # - pot
+  # - prometheus_client
+  # - prompt_toolkit
+  # - protobuf
+  # - psutil
+  # - pthread-stubs
+  # - ptyprocess
+  # - py
+  # - pyasn1
+  # - pyasn1-modules
+  # - pycairo
+  # - pycodestyle
+  # - pycparser
+  # - pyflakes
+  # - pygments
+  # - pygpu
+  # - pyhamcrest
+  # - pymc
+  # - pymc3
+  # - pyopenssl
+  # - pypairs
+  # - pyparsing
+  # - pyqt
+  # - pyrsistent
+  # - pysocks
+  # - pystan
+  # - pytables
+  # - python=3
+  # - python-dateutil
+  # - python-igraph
+  # - pytz
+  # - pyyaml
+  # - pyzmq
+  # - qt
+  # - qtconsole
+  # - r-assertthat
+  # - r-backports
+  # - r-base
+  # - r-base64enc
+  # - r-bh
+  # - r-bindr
+  # - r-bindrcpp
+  # - r-bit
+  # - r-bit64
+  # - r-bitops
+  # - r-blob
+  # - r-broom
+  # - r-catools
+  # - r-cellranger
+  # - r-class
+  # - r-cli
+  # - r-cluster
+  # - r-codetools
+  # - r-colorspace
+  # - r-config
+  # - r-crayon
+  # - r-crosstalk
+  # - r-curl
+  # - r-data.table
+  # - r-dbi
+  # - r-dbplyr
+  # - r-dendextend
+  # - r-deoptimr
+  # - r-dichromat
+  # - r-digest
+  # - r-diptest
+  # - r-dplyr
+  # - r-evaluate
+  # - r-fansi
+  # - r-flexmix
+  # - r-forcats
+  # - r-foreach
+  # - r-formatr
+  # - r-fpc
+  # - r-futile.logger
+  # - r-futile.options
+  # - r-gclus
+  # - r-gdata
+  # - r-ggplot2
+  # - r-glue
+  # - r-gplots
+  # - r-gridextra
+  # - r-gtable
+  # - r-gtools
+  # - r-haven
+  # - r-heatmaply
+  # - r-hexbin
+  # - r-highr
+  # - r-hms
+  # - r-htmltools
+  # - r-htmlwidgets
+  # - r-httpuv
+  # - r-httr
+  # - r-iterators
+  # - r-jsonlite
+  # - r-kernlab
+  # - r-kernsmooth
+  # - r-knitr
+  # - r-labeling
+  # - r-lambda.r
+  # - r-later
+  # - r-lattice
+  # - r-lazyeval
+  # - r-magrittr
+  # - r-markdown
+  # - r-mass
+  # - r-matrix
+  # - r-matrixstats
+  # - r-mclust
+  # - r-memoise
+  # - r-mgcv
+  # - r-mime
+  # - r-miniui
+  # - r-modeltools
+  # - r-mongolite
+  # - r-munsell
+  # - r-mvtnorm
+  # - r-nlme
+  # - r-nnet
+  # - r-odbc
+  # - r-openssl
+  # - r-packrat
+  # - r-pillar
+  # - r-pkgconfig
+  # - r-pki
+  # - r-plogr
+  # - r-plotly
+  # - r-plyr
+  # - r-prabclus
+  # - r-praise
+  # - r-prettyunits
+  # - r-processx
+  # - r-profvis
+  # - r-progress
+  # - r-promises
+  # - r-purrr
+  # - r-qap
+  # - r-r6
+  # - r-rappdirs
+  # - r-rcolorbrewer
+  # - r-rcpp
+  # - r-rcurl
+  # - r-readr
+  # - r-readxl
+  # - r-registry
+  # - r-rematch
+  # - r-reshape2
+  # - r-rjava
+  # - r-rjdbc
+  # - r-rjsonio
+  # - r-rlang
+  # - r-rmarkdown
+  # - r-robustbase
+  # - r-rprojroot
+  # - r-rsconnect
+  # - r-rsqlite
+  # - r-rstudioapi
+  # - r-scales
+  # - r-seriation
+  # - r-shiny
+  # - r-snow
+  # - r-sourcetools
+  # - r-sparklyr
+  # - r-stringi
+  # - r-stringr
+  # - r-testthat
+  # - r-tibble
+  # - r-tidyr
+  # - r-tidyselect
+  # - r-tinytex
+  # - r-trimcluster
+  # - r-tsp
+  # - r-utf8
+  # - r-viridis
+  # - r-viridislite
+  # - r-webshot
+  # - r-whisker
+  # - r-withr
+  # - r-xfun
+  # - r-xml
+  # - r-xml2
+  # - r-xtable
+  # - r-yaml
+  # - readline
+  # - requests
+  # - requests-cache
+  # - rpy2
+  # - rstudio
+  # - samtools
+  # - scanpy
+  # - scikit-learn
+  # - scipy
+  # - seaborn
+  # - send2trash
+  # - service_identity
+  # - setuptools
+  # - simplegeneric
+  # - sip
+  # - six
+  # - snowballstemmer
+  # - soupsieve
+  # - sphinx
+  # - sphinxcontrib-websupport
+  # - sqlite
+  # - statsmodels
+  # - suds-jurko
+  # - tensorboard
+  # - tensorflow
+  # - termcolor
+  # - terminado
+  # - testpath
+  # - theano
+  # - tk
+  # - tktable
+  # - toolz
+  # - tornado
+  # - traitlets
+  # - twisted
+  # - tzlocal
+  # - unixodbc
+  # - urllib3
+  # - vega_datasets
+  # - watermark
+  # - wcwidth
+  # - webencodings
+  # - werkzeug
+  # - wget
+  # - wheel
+  # - widgetsnbextension
+  # - wrapt
+  # - xlrd
+  # - xorg-libxau
+  # - xorg-libxdmcp
+  # - xz
+  # - yaml
+  # - zeromq
+  # - zlib
+  # - zope.interface
+  # - zstd
+  # - pip:
+  #   - annoy
+  #   - anytree
+  #   - atomicwrites
+  #   - bbknn
+  #   - cache-to-disk
+  #   - datacache
+  #   - fa2
+  #   - flowio
+  #   - future
+  #   - gprofiler-official
+  #   - gtfparse
+  #   - hyperopt
+  #   - ipycache
+  #   - joblib
+  #   - keras
+  #   - keras-applications
+  #   - line-profiler
+  #   - loompy
+  #   - memoized-property
+  #   - mock
+  #   - multicoretsne
+  #   - natsort
+  #   - networkx
+  #   - numexpr
+  #   - pbr
+  #   - phenograph
+  #   - pluggy
+  #   - progressbar33
+  #   - pyensembl
+  #   - pymongo
+  #   - pymp-pypi
+  #   - pysam
+  #   - pytest
+  #   - serializable
+  #   - simplejson
+  #   - tinytimer
+  #   - tqdm
+  #   - typechecks
+  #   - typing
+  #   - velocyto
+  #   - wot
